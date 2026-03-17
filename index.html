@@ -61,6 +61,7 @@
       text-align:center;
       pointer-events:none;
     }
+
     #introText{
       font-size: clamp(14px, 2.2vw, 26px);
       line-height: 1.55;
@@ -74,6 +75,7 @@
     #introText.play{
       animation: introFade 11s ease-in-out forwards;
     }
+
     @keyframes introFade{
       0%   { opacity:0; transform: translateY(10px); }
       36%  { opacity:1; transform: translateY(0px); }
@@ -90,6 +92,7 @@
       transition: opacity 900ms ease, transform 900ms ease;
       pointer-events:none;
     }
+
     #site.visible{
       opacity:1;
       transform: translateY(0px);
@@ -101,6 +104,7 @@
       max-width: 1100px;
       margin: 0 auto;
     }
+
     .brand{
       display:flex;
       align-items:center;
@@ -108,12 +112,14 @@
       color:var(--fg);
       user-select:none;
     }
+
     .brand h1{
       margin:0;
       font-size: clamp(12px, 1.6vw, 18px);
       line-height:1.4;
       font-weight:400;
     }
+
     .sub{
       margin:10px 0 0;
       color: var(--muted);
@@ -147,7 +153,9 @@
       text-decoration:none;
       color:inherit;
     }
-    .tile:hover, .tile:focus-visible{
+
+    .tile:hover,
+    .tile:focus-visible{
       transform: translateY(-2px);
       border-color: rgba(233,238,246,.28);
       background: linear-gradient(180deg, var(--card2), transparent 70%);
@@ -163,6 +171,7 @@
       opacity:.95;
       transition: opacity 200ms ease;
     }
+
     .tile:hover img{ opacity:1; }
 
     .tile .meta{
@@ -172,11 +181,13 @@
       align-items:center;
       gap:12px;
     }
+
     .tile .label{
       font-size: 9px;
       color: rgba(233,238,246,.85);
       line-height: 1.6;
     }
+
     .tile .arrow{
       font-size: 10px;
       color: rgba(233,238,246,.8);
@@ -202,6 +213,7 @@
     @media (max-width: 980px){
       .tile{ grid-column: span 6; }
     }
+
     @media (max-width: 640px){
       .tile{ grid-column: span 12; }
       .tile img{ height: 210px; }
@@ -251,56 +263,61 @@
       site.classList.add('visible');
     }, 11000);
 
-    const TOTAL_IMAGES = 46;
+    const TOTAL_IMAGES = 52;
 
     const links = [
-      "https://x.com/lless_tes/status/2016875649021956520",  // 1
-      "https://x.com/unicodef1wn/status/2016088688694907088", // 2
-      "https://x.com/Nurarihyasa/status/2015484206676111543", // 3
-      "https://x.com/Linazhou5542/status/2015289734814433321",// 4
-      "https://x.com/unicodef1wn/status/2014763866924716478", // 5
-      "https://x.com/miketwinks/status/2014686124174700856",  // 6
-      "https://x.com/beamnxw/status/2014680557364396515",     // 7
-      "https://x.com/linhdoan02/status/2014281720779231358",  // 8
-      "https://x.com/0xUnemployment/status/2013980130268291407", // 9
-      "https://x.com/unicodef1wn/status/2013847161213948063", // 10
-      "https://x.com/realkmte/status/2013547179508744546",    // 11
-      "https://x.com/AubrieHart17213/status/2013542546207920527", // 12
-      "https://x.com/linhdoan02/status/2013477303809122342",  // 13
-      "https://x.com/0xCryptoViktor_/status/2018974574461743387", // 14
-      "https://x.com/unicodef1wn/status/2018770206684799190", // 15
-      "https://x.com/Nurarihyasa/status/2018745618999529637", // 16
-      "https://x.com/Nurarihyasa/status/2019736731054960797", // 17
-      "https://x.com/Chupaa_mw/status/2013327632398721066",   // 18
-      "https://x.com/unicodef1wn/status/2012845906861670561", // 19
-      "https://x.com/unicodef1wn/status/2012250294504108233", // 20
-      "https://x.com/unicodef1wn/status/2011456643289190853", // 21
-      "https://x.com/linhdoan02/status/2011056790247784513",  // 22
-      "https://x.com/miketwinks/status/2011006638128349221",  // 23
-      "https://x.com/spicycandy00/status/2009660729843183995",// 24
-      "https://x.com/linhdoan02/status/2009227776004641238",  // 25
-      "https://x.com/realkmte/status/2009201054739779758",    // 26
-      "https://x.com/aidendeng_eth/status/2008770116314689961", // 27
-      "https://x.com/aidendeng_eth/status/2007037063632421178", // 28
-      "https://x.com/linhdoan02/status/2006596393318924434",  // 29
-
-      "https://x.com/unicodef1wn/status/2020905465505337654", // 30
-      "https://x.com/unicodef1wn/status/2021588394153771166", // 31
-      "https://x.com/unicodef1wn/status/2021925958127956232", // 32
-      "https://x.com/cung_he56063/status/2022214183056814286", // 33
-      "https://x.com/unicodef1wn/status/2022634922175873072", // 34
-      "https://x.com/Nurarihyasa/status/2022933633607098462", // 35
-      "https://x.com/unicodef1wn/status/2023832767675723880", // 36
-      "https://x.com/Markullill/status/2024257745273385398",  // 37
-      "https://x.com/unicodef1wn/status/2024493252691308803", // 38
-      "https://x.com/Markullill/status/2024604662515781785",  // 39
-      "https://x.com/unicodef1wn/status/2025154058357526899", // 40
-      "https://x.com/unicodef1wn/status/2025882367756284120", // 41
-      "https://x.com/unicodef1wn/status/2026587317012439084", // 42
-      "https://x.com/Markullill/status/2026726278712238471",  // 43
-      "https://x.com/unicodef1wn/status/2027414755099468091", // 44
-      "https://x.com/Chupaa_mw/status/2027655108222456230",   // 45
-      "https://x.com/Chupaa_mw/status/2028372190803218662"    // 46
+      "https://x.com/lless_tes/status/2016875649021956520",
+      "https://x.com/unicodef1wn/status/2016088688694907088",
+      "https://x.com/Nurarihyasa/status/2015484206676111543",
+      "https://x.com/Linazhou5542/status/2015289734814433321",
+      "https://x.com/unicodef1wn/status/2014763866924716478",
+      "https://x.com/miketwinks/status/2014686124174700856",
+      "https://x.com/beamnxw/status/2014680557364396515",
+      "https://x.com/linhdoan02/status/2014281720779231358",
+      "https://x.com/0xUnemployment/status/2013980130268291407",
+      "https://x.com/unicodef1wn/status/2013847161213948063",
+      "https://x.com/realkmte/status/2013547179508744546",
+      "https://x.com/AubrieHart17213/status/2013542546207920527",
+      "https://x.com/linhdoan02/status/2013477303809122342",
+      "https://x.com/0xCryptoViktor_/status/2018974574461743387",
+      "https://x.com/unicodef1wn/status/2018770206684799190",
+      "https://x.com/Nurarihyasa/status/2018745618999529637",
+      "https://x.com/Nurarihyasa/status/2019736731054960797",
+      "https://x.com/Chupaa_mw/status/2013327632398721066",
+      "https://x.com/unicodef1wn/status/2012845906861670561",
+      "https://x.com/unicodef1wn/status/2012250294504108233",
+      "https://x.com/unicodef1wn/status/2011456643289190853",
+      "https://x.com/linhdoan02/status/2011056790247784513",
+      "https://x.com/miketwinks/status/2011006638128349221",
+      "https://x.com/spicycandy00/status/2009660729843183995",
+      "https://x.com/linhdoan02/status/2009227776004641238",
+      "https://x.com/realkmte/status/2009201054739779758",
+      "https://x.com/aidendeng_eth/status/2008770116314689961",
+      "https://x.com/aidendeng_eth/status/2007037063632421178",
+      "https://x.com/linhdoan02/status/2006596393318924434",
+      "https://x.com/unicodef1wn/status/2020905465505337654",
+      "https://x.com/unicodef1wn/status/2021588394153771166",
+      "https://x.com/unicodef1wn/status/2021925958127956232",
+      "https://x.com/cung_he56063/status/2022214183056814286",
+      "https://x.com/unicodef1wn/status/2022634922175873072",
+      "https://x.com/Nurarihyasa/status/2022933633607098462",
+      "https://x.com/unicodef1wn/status/2023832767675723880",
+      "https://x.com/Markullill/status/2024257745273385398",
+      "https://x.com/unicodef1wn/status/2024493252691308803",
+      "https://x.com/Markullill/status/2024604662515781785",
+      "https://x.com/unicodef1wn/status/2025154058357526899",
+      "https://x.com/unicodef1wn/status/2025882367756284120",
+      "https://x.com/unicodef1wn/status/2026587317012439084",
+      "https://x.com/Markullill/status/2026726278712238471",
+      "https://x.com/unicodef1wn/status/2027414755099468091",
+      "https://x.com/Chupaa_mw/status/2027655108222456230",
+      "https://x.com/Chupaa_mw/status/2028372190803218662",
+      "https://x.com/0xbliink/status/2031724420184584481",
+      "https://x.com/Sadnoboy616/status/2032368608320327814",
+      "https://x.com/AnujRag1439/status/2032520097949167735",
+      "https://x.com/0xbliink/status/2033182416899072312",
+      "https://x.com/koookiee765/status/2033301405629292820",
+      "https://x.com/0xbliink/status/2033615843020493117"
     ];
 
     const grid = document.getElementById('galleryGrid');
@@ -319,12 +336,12 @@
         a.className = 'tile';
         a.href = href;
         a.target = '_blank';
-        a.rel = 'noopener noreferrer'; 
+        a.rel = 'noopener noreferrer';
 
         const img = document.createElement('img');
         img.src = `${i}.png`;
         img.alt = `Grad Gallery image ${i}`;
-        img.loading = 'lazy'; 
+        img.loading = 'lazy';
 
         const meta = document.createElement('div');
         meta.className = 'meta';
@@ -351,7 +368,6 @@
 
     buildGallery();
 
-    // ====== BACKGROUND CANVAS ======
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d', { alpha: true });
 
@@ -367,6 +383,7 @@
       canvas.style.height = H + 'px';
       ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     }
+
     window.addEventListener('resize', resize, { passive: true });
     resize();
 
@@ -383,10 +400,12 @@
         size: 10 + Math.random() * 5
       }));
     }
+
     initDrops();
     window.addEventListener('resize', initDrops, { passive: true });
 
     let last = performance.now();
+
     function frame(now){
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
@@ -416,6 +435,7 @@
     }
 
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     if(!reduce){
       ctx.fillStyle = 'rgba(7,9,12,1)';
       ctx.fillRect(0, 0, W, H);
@@ -425,8 +445,8 @@
       ctx.fillRect(0, 0, W, H);
       ctx.font = `12px "Press Start 2P", monospace`;
       ctx.fillStyle = 'rgba(233,238,246,0.2)';
-      for(let i=0;i<60;i++){
-        ctx.fillText('./', Math.random()*W, Math.random()*H);
+      for(let i = 0; i < 60; i++){
+        ctx.fillText('./', Math.random() * W, Math.random() * H);
       }
       site.classList.add('visible');
     }
